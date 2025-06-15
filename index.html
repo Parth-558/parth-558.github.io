@@ -1,120 +1,81 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Parth Pawar | Embedded Systems Engineer</title>
+  <title>Parth Pawar | Embedded Engineer Portfolio</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #f4f4f9;
-      color: #333;
-    }
-    header {
-      background: #4a90e2;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-    }
-    section {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #4a90e2;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    ul li::before {
-      content: "✓";
-      margin-right: 10px;
-      color: #4a90e2;
-    }
-    .project {
-      margin-bottom: 20px;
-    }
-    .button {
-      background: #4a90e2;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 10px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #666;
-    }
-    .contact a {
-      color: #4a90e2;
-      text-decoration: none;
-    }
-    @media (max-width: 600px) {
-      section {
-        margin: 10px;
-      }
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #ffffff; color: #333; }
+    header { background: #1976d2; color: white; padding: 2rem; text-align: center; }
+    section { padding: 2rem; max-width: 800px; margin: auto; }
+    h2 { color: #d32f2f; }
+    pre { background: #f4f4f4; padding: 1rem; overflow-x: auto; }
+    a { color: #1976d2; text-decoration: none; }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>👨‍💻 Parth Pawar</h1>
-    <p>B.Tech in Mechatronics Engineering | Embedded Systems Engineer</p>
-  </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>Hi! I’m <strong>Parth Pawar</strong>, a passionate final-year engineering student from Maharashtra, India.</p>
-    <p>I love building real-world electronics projects using microcontrollers, sensors, and embedded C. I'm seeking an opportunity as an <strong>Embedded Systems Engineer</strong> to solve problems and build smarter systems.</p>
-  </section>
+<header>
+  <h1>Parth Pawar</h1>
+  <p>B.Tech in Mechatronics Engineering | Embedded Systems Enthusiast</p>
+  <p>
+    📧 <a href="mailto:parthpawar808@gmail.com" style="color: #fff;">parthpawar808@gmail.com</a> |
+    🔗 <a href="https://www.linkedin.com/in/parth-pawar-b82628248" target="_blank" style="color: #fff;">LinkedIn</a> |
+    💻 <a href="https://github.com/parth-558" target="_blank" style="color: #fff;">GitHub</a>
+  </p>
+</header>
 
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>C Programming</li>
-      <li>Embedded C</li>
-      <li>Arduino, AVR</li>
-      <li>UART/I2C</li>
-      <li>Sensors, Circuit Design</li>
-      <li>Git & GitHub</li>
-      <li>PCB Design Basics</li>
-    </ul>
-  </section>
+<section id="traffic-light">
+  <h2>🚦 Traffic Light System using Arduino</h2>
+  <p>This project simulates a real-world traffic light using Arduino Uno and basic components. It’s a great example of using embedded systems logic in automation.</p>
 
-  <section>
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>💡 LED Blinking</h3>
-      <p>Simple LED blinking using Arduino UNO and C code.</p>
-      <a class="button" href="https://github.com/parth-558/Led_blinking" target="_blank">View on GitHub</a>
-    </div>
-  </section>
+  <h3>🔧 Hardware Used:</h3>
+  <ul>
+    <li>Arduino Uno R3</li>
+    <li>Red, Yellow, Green LEDs</li>
+    <li>220Ω Resistors (x3)</li>
+    <li>Breadboard & Jumper Wires</li>
+  </ul>
 
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:parthpawar808@gmail.com">parthpawar808@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/parth-pawar-b82628248" target="_blank">linkedin.com/in/parth-pawar</a></p>
-    <a class="button" href="Parth_Pawar_Resume.pdf" download>📄 Download My Resume</a>
-  </section>
+  <h3>🧠 How It Works:</h3>
+  <ol>
+    <li>Red LED ON – 5 seconds</li>
+    <li>Yellow LED ON – 2 seconds</li>
+    <li>Green LED ON – 5 seconds</li>
+    <li>Repeats in a loop</li>
+  </ol>
 
-  <footer>
-    &copy; 2025 Parth Pawar
-  </footer>
+  <h3>📟 Arduino Code Snippet:</h3>
+  <pre><code>
+void setup() {
+  pinMode(2, OUTPUT); // Red
+  pinMode(3, OUTPUT); // Yellow
+  pinMode(4, OUTPUT); // Green
+}
+
+void loop() {
+  digitalWrite(2, HIGH);
+  delay(5000);
+  digitalWrite(2, LOW);
+
+  digitalWrite(3, HIGH);
+  delay(2000);
+  digitalWrite(3, LOW);
+
+  digitalWrite(4, HIGH);
+  delay(5000);
+  digitalWrite(4, LOW);
+}
+  </code></pre>
+
+  <p><strong>✅ GitHub Repo:</strong>
+    <a href="https://github.com/parth-558/traffic-light-arduino" target="_blank">Click here to view</a>
+  </p>
+
+  <p><strong>💡 Future ideas:</strong> Add countdown timer, pedestrian button, or buzzers!</p>
+</section>
+
 </body>
 </html>
