@@ -1,81 +1,88 @@
-
+<!_ _ update_ _>.
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Parth Pawar | Embedded Engineer Portfolio</title>
+  <title>Parth Pawar | Embedded Systems Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #ffffff; color: #333; }
-    header { background: #1976d2; color: white; padding: 2rem; text-align: center; }
-    section { padding: 2rem; max-width: 800px; margin: auto; }
-    h2 { color: #d32f2f; }
-    pre { background: #f4f4f4; padding: 1rem; overflow-x: auto; }
-    a { color: #1976d2; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      color: #007acc;
+    }
+    .intro {
+      margin-bottom: 2rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      background: #fff;
+      margin-bottom: 10px;
+      padding: 15px;
+      border-left: 5px solid #007acc;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9em;
+      color: #777;
+    }
   </style>
 </head>
 <body>
 
-<header>
   <h1>Parth Pawar</h1>
-  <p>B.Tech in Mechatronics Engineering | Embedded Systems Enthusiast</p>
-  <p>
-    📧 <a href="mailto:parthpawar808@gmail.com" style="color: #fff;">parthpawar808@gmail.com</a> |
-    🔗 <a href="https://www.linkedin.com/in/parth-pawar-b82628248" target="_blank" style="color: #fff;">LinkedIn</a> |
-    💻 <a href="https://github.com/parth-558" target="_blank" style="color: #fff;">GitHub</a>
+  <p class="intro">
+    B.Tech Mechatronics Engineering <br>
+    Embedded Systems Developer <br>
+    Email: <a href="mailto:parthpawar808@gmail.com">parthpawar808@gmail.com</a> <br>
+    LinkedIn: <a href="https://www.linkedin.com/in/parth-pawar-b82628248" target="_blank">parth-pawar</a> <br>
+    GitHub: <a href="https://github.com/parth-558" target="_blank">parth-558</a>
   </p>
-</header>
 
-<section id="traffic-light">
-  <h2>🚦 Traffic Light System using Arduino</h2>
-  <p>This project simulates a real-world traffic light using Arduino Uno and basic components. It’s a great example of using embedded systems logic in automation.</p>
-
-  <h3>🔧 Hardware Used:</h3>
-  <ul>
-    <li>Arduino Uno R3</li>
-    <li>Red, Yellow, Green LEDs</li>
-    <li>220Ω Resistors (x3)</li>
-    <li>Breadboard & Jumper Wires</li>
+  <h2>🔧 Embedded Projects</h2>
+  <ul id="projectList">
+    <li>Loading your projects from GitHub...</li>
   </ul>
 
-  <h3>🧠 How It Works:</h3>
-  <ol>
-    <li>Red LED ON – 5 seconds</li>
-    <li>Yellow LED ON – 2 seconds</li>
-    <li>Green LED ON – 5 seconds</li>
-    <li>Repeats in a loop</li>
-  </ol>
+  <footer>
+    &copy; 2025 Parth Pawar. Built with HTML + GitHub Pages.
+  </footer>
 
-  <h3>📟 Arduino Code Snippet:</h3>
-  <pre><code>
-void setup() {
-  pinMode(2, OUTPUT); // Red
-  pinMode(3, OUTPUT); // Yellow
-  pinMode(4, OUTPUT); // Green
-}
+  <script>
+    const GITHUB_USERNAME = "parth-558";
+    const list = document.getElementById("projectList");
 
-void loop() {
-  digitalWrite(2, HIGH);
-  delay(5000);
-  digitalWrite(2, LOW);
-
-  digitalWrite(3, HIGH);
-  delay(2000);
-  digitalWrite(3, LOW);
-
-  digitalWrite(4, HIGH);
-  delay(5000);
-  digitalWrite(4, LOW);
-}
-  </code></pre>
-
-  <p><strong>✅ GitHub Repo:</strong>
-    <a href="https://github.com/parth-558/traffic-light-arduino" target="_blank">Click here to view</a>
-  </p>
-
-  <p><strong>💡 Future ideas:</strong> Add countdown timer, pedestrian button, or buzzers!</p>
-</section>
-
+    fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos`)
+      .then(response => response.json())
+      .then(data => {
+        list.innerHTML = "";
+        data.forEach(repo => {
+          const li = document.createElement("li");
+          li.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a>: ${repo.description || "No description"}`;
+          list.appendChild(li);
+        });
+      })
+      .catch(error => {
+        list.innerHTML = "<li>Could not load GitHub projects.</li>";
+        console.error(error);
+      });
+  </script>
 </body>
 </html>
+
+
