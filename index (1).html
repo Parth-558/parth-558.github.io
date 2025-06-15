@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parth Pawar | Embedded Projects</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #1a73e8;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #fff;
+      margin: 0.5rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    a {
+      text-decoration: none;
+      color: #1a73e8;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Parth Pawar's Embedded Projects</h1>
+  <p>Auto-updated from <a href="https://github.com/parth-558" target="_blank">GitHub Profile</a></p>
+  <h2>Projects</h2>
+  <ul id="project-list">
+    <li>Loading projects...</li>
+  </ul>
+
+  <script>
+    fetch('https://api.github.com/users/parth-558/repos')
+      .then(response => response.json())
+      .then(data => {
+        const list = document.getElementById('project-list');
+        list.innerHTML = ''; // Clear "Loading..." text
+
+        data.forEach(repo => {
+          const li = document.createElement('li');
+          li.innerHTML = `<strong>${repo.name}</strong> – <a href="${repo.html_url}" target="_blank">View on GitHub</a>`;
+          list.appendChild(li);
+        });
+      })
+      .catch(error => {
+        document.getElementById('project-list').innerHTML = '<li>Failed to load projects. Try again later.</li>';
+        console.error('Error fetching GitHub repos:', error);
+      });
+  </script>
+</body>
+</html>
