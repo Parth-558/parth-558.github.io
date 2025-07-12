@@ -3,156 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parth Pawar | Embedded Engineer</title>
+  <title>Parth Pawar | Embedded Engineer Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f7f9fb;
-      color: #333;
-      transition: background 0.3s, color 0.3s;
+      background: #f9fafb;
+      color: #111;
     }
     header {
       background: #111827;
-      color: #fff;
-      padding: 2rem 2rem 1rem;
+      color: white;
+      padding: 2rem;
       text-align: center;
     }
     header h1 {
-      margin: 0.5rem 0 0;
+      margin: 0;
       font-size: 2rem;
     }
     header p {
-      font-size: 1rem;
-      margin-bottom: 1rem;
+      font-size: 1.1rem;
     }
-    .cta-buttons a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.6rem 1rem;
-      background: #2563eb;
-      color: #fff;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-    section {
-      padding: 2rem;
+    .projects {
       max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      margin-bottom: 0.5rem;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
     .project {
-      background: #fff;
+      background: white;
       padding: 1rem;
-      margin: 1rem 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .project h3 {
+      margin-top: 0;
     }
     .project a {
-      margin-right: 1rem;
+      color: #2563eb;
+      text-decoration: none;
     }
-    ul.skills {
-      list-style: none;
-      padding: 0;
-    }
-    ul.skills li {
-      background: #e0f2fe;
-      display: inline-block;
-      padding: 0.4rem 0.8rem;
-      margin: 0.3rem;
-      border-radius: 4px;
-      font-size: 0.9rem;
+    .project p {
+      margin-bottom: 0.5rem;
     }
     footer {
       text-align: center;
       padding: 1rem;
       background: #e5e7eb;
+      color: #555;
     }
-    .contact-icons a {
-      margin: 0 0.5rem;
-      text-decoration: none;
-      color: #2563eb;
+      .chip {
+      display: inline-block;
+      background-color: #e0f2fe;
+      color: #0369a1;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      margin: 4px;
     }
-    .dark-mode {
-      background: #1f2937;
-      color: #f3f4f6;
+    .chip-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
     }
-    .dark-mode header,
-    .dark-mode footer {
-      background: #111827;
-      color: #f3f4f6;
-    }
-    .dark-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      padding: 0.4rem 0.8rem;
-      background: #2563eb;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-  </style>
+</style>
 </head>
 <body>
-  <button class="dark-toggle" onclick="document.body.classList.toggle('dark-mode')">Toggle Dark Mode</button>
-
   <header>
-    <h1>Parth Pawar</h1>
-    <p>Final Year Mechatronics Engineer | Embedded Systems Enthusiast</p>
-    <div class="cta-buttons">
-      <a href="https://github.com/Parth-558">GitHub</a>
-     <a href="Parth_Resume.pdf" target="_blank">Download Resume</a>
-     
+  <img src="parth.jpg" alt="Parth Pawar" width="120" style="border-radius: 50%; margin-bottom: 1rem;" />
+  <h1>Parth Pawar</h1>
+<p style="font-size: 1rem; margin-top: 0.5rem;">Turning Sensors, Code, and Imagination into Real-World Solutions.</p>
+  <p>Mechatronics Engineer | Passionate about building smart, real-world embedded systems that bridge hardware with intelligence.</p>
+</header>
 
-    </div>
-  </header>
+  <div class="projects" id="repo-list">
+    <h2>🔌 Projects I've Wired Up</h2>
+    <p>Auto-fetched from GitHub repos:</p>
+  </div>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I build real-world embedded systems using microcontrollers, sensors, and clean C code. I love turning hardware into intelligent systems.</p>
-  </section>
+<section style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
+  <h2>📟 Core Embedded Skills</h2>
+  <ul style="list-style: none; padding: 0;">
+    <li style="display: inline-block; margin: 0.5rem; background: #e0f2fe; padding: 0.4rem 0.8rem; border-radius: 4px;">Embedded C</li>
+    <li style="display: inline-block; margin: 0.5rem; background: #e0f2fe; padding: 0.4rem 0.8rem; border-radius: 4px;">Arduino</li>
+    <li style="display: inline-block; margin: 0.5rem; background: #e0f2fe; padding: 0.4rem 0.8rem; border-radius: 4px;">Tinkercad</li>
+    <li style="display: inline-block; margin: 0.5rem; background: #e0f2fe; padding: 0.4rem 0.8rem; border-radius: 4px;">UART / PWM / ADC</li>
+    <li style="display: inline-block; margin: 0.5rem; background: #e0f2fe; padding: 0.4rem 0.8rem; border-radius: 4px;">Git & GitHub</li>
+  </ul>
+</section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>🌬️ Smart Fan Control System</h3>
-      <p>Auto + Manual fan control using TMP36, PWM, and a pushbutton. Includes LED indication in manual mode.</p>
-      <a href="https://github.com/Parth-558/SmartFanControl" target="_blank">GitHub</a>
-      <a href="https://www.tinkercad.com/dashboard" target="_blank">Tinkercad Demo</a>
-    </div>
-  </section>
+<section style="text-align: center; margin: 2rem auto;">
+  <a href="parth resume 1.pdf" download style="color:white; background:#2563eb; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none;">📂 My Schematics (Resume)</a>
+</section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul class="skills">
-      <li>Embedded C</li>
-      <li>Arduino</li>
-      <li>Tinkercad</li>
-      <li>UART, PWM, ADC</li>
-      <li>Proteus Simulation</li>
-      <li>Git & GitHub</li>
-      <li>IoT Systems</li>
-      <li>HTML & Web Dev</li>
-    </ul>
-  </section>
+<section style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
+  <h2>📦 Technologies I Work With</h2>
+  <div class="chip-container">
+    <span class="chip">ATmega328</span>
+    <span class="chip">ESP32</span>
+    <span class="chip">PWM</span>
+    <span class="chip">UART</span>
+    <span class="chip">ADC</span>
+    <span class="chip">Interrupts</span>
+    <span class="chip">Proteus</span>
+    <span class="chip">Tinkercad</span>
+  </div>
+</section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-icons">
-      📧 <a href="mailto:parthpawar808@gmail.com">parthpawar808@gmail.com</a>
-      | 🔗 <a href="https://github.com/Parth-558">GitHub</a>
-      | 💼<a href="https://www.linkedin.com/in/parth-pawar-b82628248" target="_blank">LinkedIn</a>
+<section style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
+  <h2>🎓 Internships & Certifications</h2>
+  <ul>
+    <li>💼 <em>Coming Soon...</em> Stay tuned for updates as I complete my embedded internships and certification programs!</li>
+  </ul>
+</section>
 
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Parth Pawar. All rights reserved.</p>
+<footer>
+    <p>&copy; 2025 Parth Pawar | 📬 Contact Circuit</p>
+    <p>
+      📧 <a href="mailto:parthpawar808@gmail.com">parthpawar808@gmail.com</a> |
+      💼 <a href="https://linkedin.com/in/parth-pawar-b82628248" target="_blank">LinkedIn</a>
+    </p>
   </footer>
+
+  <script>
+    const username = "Parth-558";
+    const container = document.getElementById("repo-list");
+
+    fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
+      .then(response => response.json())
+      .then(repos => {
+        repos.forEach(repo => {
+          // Skip hidden repos if needed
+          if (!repo.description || repo.private) return;
+
+          const div = document.createElement("div");
+          div.className = "project";
+
+          div.innerHTML = `
+            <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+            <p>${repo.description}</p>
+            <a href="${repo.html_url}" target="_blank">🔗 View on GitHub</a>
+          `;
+
+          container.appendChild(div);
+        });
+      })
+      .catch(err => {
+        container.innerHTML += `<p>❌ Error loading repos: ${err.message}</p>`;
+      });
+  </script>
 </body>
 </html>
