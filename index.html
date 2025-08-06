@@ -53,7 +53,7 @@
       background: #e5e7eb;
       color: #555;
     }
-      .chip {
+    .chip {
       display: inline-block;
       background-color: #e0f2fe;
       color: #0369a1;
@@ -68,58 +68,118 @@
       justify-content: center;
       margin-top: 1rem;
     }
-</style>
+  </style>
 </head>
 <body>
   <header>
-  <img src="parth.jpg" alt="Parth Pawar" width="120" style="border-radius: 50%; margin-bottom: 1rem;" />
-  <h1>Parth Pawar</h1>
-<p style="font-size: 1rem; margin-top: 0.5rem;">Turning Sensors, Code, and Imagination into Real-World Solutions.</p>
-  <p>Mechatronics Engineer | Passionate about building smart, real-world embedded systems that bridge hardware with intelligence.</p>
-</header>
+    <img src="parth.jpg" alt="Parth Pawar" width="120" style="border-radius: 50%; margin-bottom: 1rem;" />
+    <h1>Parth Pawar</h1>
+    <p style="font-size: 1rem; margin-top: 0.5rem;">Turning Sensors, Code, and Imagination into Real-World Solutions.</p>
+    <p>Mechatronics Engineer | Passionate about building smart, real-world embedded systems that bridge hardware with intelligence.</p>
+  </header>
 
   <div class="projects" id="repo-list">
     <h2>🔌 Projects I've Wired Up</h2>
     <p>Auto-fetched from GitHub repos:</p>
   </div>
 
-<section style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
-  <h2>📟 Core Embedded Skills</h2>
-  <ul style="list-style: none; padding: 0;">
-    <li style="display: inline-block; margin: 0.5rem; background: #e0f2fe; padding: 0.4rem 0.8rem; border-radius: 4px;">Embedded C</li>
-    <li style="display: inline-block; margin: 0.5rem; background: #e0f2fe; padding: 0.4rem 0.8rem; border-radius: 4px;">Arduino</li>
-    <li style="display: inline-block; margin: 0.5rem; background: #e0f2fe; padding: 0.4rem 0.8rem; border-radius: 4px;">Tinkercad</li>
-    <li style="display: inline-block; margin: 0.5rem; background: #e0f2fe; padding: 0.4rem 0.8rem; border-radius: 4px;">UART / PWM / ADC</li>
-    <li style="display: inline-block; margin: 0.5rem; background: #e0f2fe; padding: 0.4rem 0.8rem; border-radius: 4px;">Git & GitHub</li>
-  </ul>
-</section>
+  <!-- 🧱 NEW PROJECT BLOCKS START HERE -->
+  <section class="projects">
+    <h2>🧱 Embedded Project Blocks</h2>
 
-<section style="text-align: center; margin: 2rem auto;">
-  <a href="parth resume 1.pdf" download style="color:white; background:#2563eb; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none;">📂 My Schematics (Resume)</a>
-</section>
+    <div class="project">
+      <h3>🔧 Embedded C Projects</h3>
+      <ul>
+        <li><strong>LED Blinker (Bitwise)</strong> – Basic register-level LED toggle using C <br>
+          🔗 <a href="https://github.com/Parth-558/led-blinker" target="_blank">View Code</a>
+        </li>
+        <li><strong>UART Echo</strong> – Transmit and receive characters over UART using pure C. <br>
+          🔗 <a href="https://github.com/Parth-558/uart-echo" target="_blank">View Code</a>
+        </li>
+      </ul>
+    </div>
 
-<section style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
-  <h2>📦 Technologies I Work With</h2>
-  <div class="chip-container">
-    <span class="chip">ATmega328</span>
-    <span class="chip">ESP32</span>
-    <span class="chip">PWM</span>
-    <span class="chip">UART</span>
-    <span class="chip">ADC</span>
-    <span class="chip">Interrupts</span>
-    <span class="chip">Proteus</span>
-    <span class="chip">Tinkercad</span>
-  </div>
-</section>
+    <div class="project">
+      <h3>🛠️ STM32 Bare-Metal Projects</h3>
+      <ul>
+        <li><strong>GPIO Button Toggle</strong> – Toggle LED on button press (no HAL, full register use).<br>
+          🔗 <a href="https://github.com/Parth-558/stm32-gpio-toggle" target="_blank">View Code</a>
+        </li>
+        <li><strong>USART Sensor Logger</strong> – Read sensor and send over UART to terminal. <br>
+          🔗 <a href="https://github.com/Parth-558/stm32-uart-logger" target="_blank">View Code</a>
+        </li>
+      </ul>
+    </div>
 
-<section style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
-  <h2>🎓 Internships & Certifications</h2>
-  <ul>
-    <li>💼 <em>Coming Soon...</em> Stay tuned for updates as I complete my embedded internships and certification programs!</li>
-  </ul>
-</section>
+    <div class="project">
+      <h3>🐧 Linux System Projects</h3>
+      <ul>
+        <li><strong>File Permission Analyzer</strong> – A script that scans directories and flags permission issues. <br>
+          🔗 <a href="https://github.com/Parth-558/linux-permission-analyzer" target="_blank">View Code</a>
+        </li>
+        <li><strong>Auto Backup Shell Script</strong> – Simple shell script to back up files to archive. <br>
+          🔗 <a href="https://github.com/Parth-558/linux-backup-tool" target="_blank">View Code</a>
+        </li>
+      </ul>
+    </div>
 
-<footer>
+    <div class="project">
+      <h3>🔌 Protocol Projects</h3>
+      <ul>
+        <li><strong>UART Menu System</strong> – Create command-line menu over UART to control devices. <br>
+          🔗 <a href="https://github.com/Parth-558/uart-menu-system" target="_blank">View Code</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>🚀 Future Projects (FreeRTOS / TinyML)</h3>
+      <ul>
+        <li><strong>FreeRTOS LED Task Scheduler</strong> – RTOS project with multiple LED blink tasks. <br>
+          🔗 <a href="https://github.com/Parth-558/freertos-led" target="_blank">View Code</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- 🧱 NEW PROJECT BLOCKS END -->
+
+  <section style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>📟 Core Embedded Skills</h2>
+    <ul style="list-style: none; padding: 0;">
+      <li style="display: inline-block; margin: 0.5rem; background: #e0f2fe; padding: 0.4rem 0.8rem; border-radius: 4px;">Embedded C</li>
+      <li style="display: inline-block; margin: 0.5rem; background: #e0f2fe; padding: 0.4rem 0.8rem; border-radius: 4px;">Arduino</li>
+      <li style="display: inline-block; margin: 0.5rem; background: #e0f2fe; padding: 0.4rem 0.8rem; border-radius: 4px;">Tinkercad</li>
+      <li style="display: inline-block; margin: 0.5rem; background: #e0f2fe; padding: 0.4rem 0.8rem; border-radius: 4px;">UART / PWM / ADC</li>
+      <li style="display: inline-block; margin: 0.5rem; background: #e0f2fe; padding: 0.4rem 0.8rem; border-radius: 4px;">Git & GitHub</li>
+    </ul>
+  </section>
+
+  <section style="text-align: center; margin: 2rem auto;">
+    <a href="parth resume 1.pdf" download style="color:white; background:#2563eb; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none;">📂 My Schematics (Resume)</a>
+  </section>
+
+  <section style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>📦 Technologies I Work With</h2>
+    <div class="chip-container">
+      <span class="chip">ATmega328</span>
+      <span class="chip">ESP32</span>
+      <span class="chip">PWM</span>
+      <span class="chip">UART</span>
+      <span class="chip">ADC</span>
+      <span class="chip">Interrupts</span>
+      <span class="chip">Proteus</span>
+      <span class="chip">Tinkercad</span>
+    </div>
+  </section>
+
+  <section style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
+    <h2>🎓 Internships & Certifications</h2>
+    <ul>
+      <li>💼 <em>Coming Soon...</em> Stay tuned for updates as I complete my embedded internships and certification programs!</li>
+    </ul>
+  </section>
+
+  <footer>
     <p>&copy; 2025 Parth Pawar | 📬 Contact Circuit</p>
     <p>
       📧 <a href="mailto:parthpawar808@gmail.com">parthpawar808@gmail.com</a> |
@@ -135,7 +195,6 @@
       .then(response => response.json())
       .then(repos => {
         repos.forEach(repo => {
-          // Skip hidden repos if needed
           if (!repo.description || repo.private) return;
 
           const div = document.createElement("div");
